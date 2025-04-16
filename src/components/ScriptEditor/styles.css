@@ -1,0 +1,255 @@
+
+/* Script Editor Container */
+.script-editor-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12pt;
+  line-height: 1.5;
+  position: relative;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Editor Toolbar */
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.toolbar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-right: 12px;
+}
+
+.toolbar-button {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toolbar-button:hover {
+  background-color: #eee;
+}
+
+/* Editor Container */
+.editor-container {
+  position: relative;
+  background-color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-height: 500px;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12pt;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.editor-placeholder {
+  color: #999;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Scene Heading - ALL CAPS, left-aligned (1.5" margin) */
+.scene-heading {
+  text-transform: uppercase;
+  margin: 1.5em 0 0.5em;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+}
+
+/* Action - Standard case, left-aligned (1.5" margin) */
+.action {
+  margin: 0.5em 0;
+  position: relative;
+  outline: none;
+}
+
+/* Character - ALL CAPS, indented (3.7" from page left) */
+.character {
+  text-transform: uppercase;
+  margin: 1em 0 0.2em;
+  padding-left: 2.2in;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+}
+
+/* Dialogue - Standard case, indented block (2.5" left, 2.5" right) */
+.dialogue {
+  margin: 0 2in 0.5em 1in;
+  position: relative;
+  outline: none;
+}
+
+/* Parenthetical - standard case, in (), indented (3.1" from page left) */
+.parenthetical {
+  padding-left: 1.6in;
+  margin: 0.2em 0;
+  font-style: italic;
+  position: relative;
+  outline: none;
+}
+
+/* Transition - ALL CAPS, right-aligned (6.0" from page left) */
+.transition {
+  text-transform: uppercase;
+  text-align: right;
+  margin: 1em 0.2in 1em 0;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+}
+
+/* General Note - standard case, left-aligned */
+.general-note {
+  margin: 0.5em 0;
+  color: #666;
+  font-style: italic;
+  position: relative;
+  outline: none;
+}
+
+/* Page Break */
+.page-break {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 1em 0;
+  cursor: pointer;
+}
+
+.page-break hr {
+  flex: 1;
+  border: none;
+  border-top: 1px dashed #aaa;
+}
+
+.page-break span {
+  color: #999;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-break.selected {
+  background-color: rgba(0, 120, 212, 0.1);
+}
+
+/* Shot/Subheading */
+.shot-subheading {
+  text-transform: uppercase;
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+}
+
+/* Montage Begin */
+.montage-begin {
+  text-transform: uppercase;
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  outline: none;
+}
+
+/* Montage End */
+.montage-end {
+  text-transform: uppercase;
+  margin: 0.5em 0 1em;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  outline: none;
+}
+
+/* Flashback Begin */
+.flashback-begin {
+  font-style: italic;
+  margin: 1em 0 0.5em;
+  text-align: center;
+  position: relative;
+  outline: none;
+}
+
+/* Flashback End */
+.flashback-end {
+  font-style: italic;
+  margin: 0.5em 0 1em;
+  text-align: center;
+  position: relative;
+  outline: none;
+}
+
+/* Selected element */
+[class].selected {
+  background-color: rgba(0, 120, 212, 0.1);
+  outline: 1px solid rgba(0, 120, 212, 0.5);
+}
+
+/* Context Menu */
+.context-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.context-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  min-width: 180px;
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.context-menu-item:hover {
+  background-color: #f5f5f5;
+}
